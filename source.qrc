@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/image">
+        <file alias="blank_bg">src/image/blank_bg.png</file>
+        <file alias="feed">src/image/feed.png</file>
+        <file alias="feed_hover">src/image/feed_hover.png</file>
+        <file alias="feed_press">src/image/feed_press.png</file>
+        <file alias="pet_egg">src/image/pet_egg.png</file>
+        <file alias="pet_frame">src/image/pet_frame.png</file>
+        <file alias="adventure">src/image/adventure.png</file>
+        <file alias="adventure_hover">src/image/adventure_hover.png</file>
+        <file alias="adventure_press">src/image/adventure_press.png</file>
+        <file alias="bath">src/image/bath.png</file>
+        <file alias="bath_hover">src/image/bath_hover.png</file>
+        <file alias="bath_press">src/image/bath_press.png</file>
+    </qresource>
+    <qresource prefix="/TTF">
+        <file alias="FZXS">src/ttf/FZXS24.TTF</file>
+    </qresource>
+</RCC>
