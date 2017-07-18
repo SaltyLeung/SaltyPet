@@ -11,7 +11,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(Data*,QWidget *parent = 0);
     ~MainWindow();
     Data* dataPtr;
 
@@ -21,5 +21,7 @@ private slots:
     void bath_clicked();
     void feed_clicked();
     void adventure_clicked();
+    void dataUpdate();
+
 };
 #endif // MAINWINDOW_H

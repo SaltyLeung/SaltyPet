@@ -3,9 +3,15 @@
 #include <QApplication>
 #include<QPropertyAnimation>
 #include<QMessageBox>
+#include<QFontDatabase>
+#include<QFont>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    //QFontDatabase::addApplicationFont(":/TTF/FZXS");
+        //a.setFont(QFont(":/TTF/FZXS"));
+
     Data gameData;
     bool restart=true;
     bool isOpen=false;
@@ -17,9 +23,9 @@ int main(int argc, char *argv[])
         //QMessageBox::information(NULL, "Title", "Content", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
         message.exec();
     }
-    MainWindow w;
+
+    MainWindow w(&gameData);
     w.setWindowTitle("Salty Pet");
-    w.dataPtr=&gameData;
     QPropertyAnimation *animation = new QPropertyAnimation(&w,"windowOpacity");
             animation->setDuration(1000);
             animation->setStartValue(0);

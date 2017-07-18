@@ -14,13 +14,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    data.cpp \
-    fileop.cpp
+    fileop.cpp \
+    data1.cpp \
+    data.cpp
 
 HEADERS  += mainwindow.h \
-    data.h \
     fileop.h \
-    datastreamop.h
+    datastreamop.h \
+    data1.h \
+    data.h
 
 FORMS    += mainwindow.ui
 
