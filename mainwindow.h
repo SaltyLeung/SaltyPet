@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include"data.h"
+//#include"adventurewindow.h"
 #include <QMainWindow>
 namespace Ui {
 class MainWindow;

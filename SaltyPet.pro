@@ -15,16 +15,17 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     fileop.cpp \
-    data1.cpp \
-    data.cpp
+    data.cpp \
+    adventurewindow.cpp
 
 HEADERS  += mainwindow.h \
     fileop.h \
     datastreamop.h \
-    data1.h \
-    data.h
+    data.h \
+    adventurewindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    adventurewindow.ui
 
 RESOURCES += \
     source.qrc

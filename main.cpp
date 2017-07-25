@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
     }
 
     MainWindow w(&gameData);
+    //w.setWindowFlags(windowFlags()&~ Qt::WindowMinMaxButtonsHint);
     w.setWindowTitle("Salty Pet");
     QPropertyAnimation *animation = new QPropertyAnimation(&w,"windowOpacity");
             animation->setDuration(1000);

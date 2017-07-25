@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include"fileop.h"
+#include"adventurewindow.h"
 #include<QString>
 //#define level getLevel()
 //#define name getName()
@@ -50,6 +51,10 @@ void MainWindow::feed_clicked()
 
 void MainWindow::adventure_clicked()
 {
+   this->hide();
+   AdventureWindow *adw=new AdventureWindow(this);
+    (*adw).setWindowFlags(windowFlags()&~ (Qt::WindowMinMaxButtonsHint | Qt::WindowCloseButtonHint));
+    (*adw).show();
 
 }
 void MainWindow::dataUpdate()
