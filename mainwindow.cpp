@@ -234,13 +234,5 @@ void MainWindow::keyPressEvent(QKeyEvent *e)
     //case Qt::Key_D : ui->pushButton->move(x+10, y); break;
 default:break;
     }
-    if(e->key()==Qt::Key_1)
-  ｛
- if(e->key()==Qt::Key_0){
-
-     ｝
-                }
-
-          ｝
 
 }
