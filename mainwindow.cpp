@@ -3,6 +3,7 @@
 #include"fileop.h"
 #include"adventurewindow.h"
 #include<QString>
+#include<QtMultimedia/QMediaPlayer>
 //#define level getLevel()
 //#define name getName()
 //#define attribute getAttribute()
@@ -30,6 +31,21 @@ MainWindow::MainWindow(Data *gameData,QWidget *parent) :
     QObject::connect(ui->feed_button, SIGNAL(clicked()), this, SLOT(feed_clicked()));
     QObject::connect(ui->bath_button, SIGNAL(clicked()), this, SLOT(bath_clicked()));
     QObject::connect(ui->adventure_button, SIGNAL(clicked()), this, SLOT(adventure_clicked()));
+    QObject::connect(ui->music_button, SIGNAL(clicked()), this, SLOT(music_clicked()));
+
+
+    player = new QMediaPlayer();
+       //connect(player, SIGNAL(positionChanged(qint64)), this, SLOT(positionChanged(qint64)));
+     player->setMedia(QUrl("qrc:/music/ShootingTown"));
+     player->setVolume(30);
+     player->play();
+
+     for(int i=0;i<=13;++i){
+        pianoPlayer[i] = new QMediaPlayer();
+        QString url="qrc:/piano/"+QString::number(i);
+        pianoPlayer[i]->setMedia(QUrl(url));
+        pianoPlayer[i]->setVolume(30);
+     }
 }
 
 
@@ -37,6 +53,24 @@ MainWindow::~MainWindow()
 {
     delete ui;
     FileOp::save(dataPtr);
+}
+
+void MainWindow::music_clicked()
+{
+    static bool on=true;
+    if(on==true)
+    {
+        ui->music_button->setStyleSheet("QPushButton{border-image: url(:/music/music_off);}");
+        player->stop();
+        on=false;
+    }
+    else
+    {
+        ui->music_button->setStyleSheet("QPushButton{border-image: url(:/music/music_on);}");
+        player->play();
+        on=true;
+    }
+
 }
 
 void MainWindow::bath_clicked()
@@ -125,4 +159,88 @@ void MainWindow::dataUpdate()
      }
      ui->period->setText(period);
      ui->level->setText(QString::number(dataPtr->level));
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *e)
+
+{
+
+    //int x = ui->pushButton->x();
+
+    //int y = ui->pushButton->y();
+
+    switch (e->key())
+
+    {
+
+    case Qt::Key_1 :
+        pianoPlayer[1]->setPosition(0);
+        pianoPlayer[1]->play();
+        break;
+    case Qt::Key_2 :
+        pianoPlayer[2]->setPosition(0);
+        pianoPlayer[2]->play();
+        break;
+    case Qt::Key_3 :
+        pianoPlayer[3]->setPosition(0);
+        pianoPlayer[3]->play();
+        break;
+    case Qt::Key_4 :
+        pianoPlayer[4]->setPosition(0);
+        pianoPlayer[4]->play();
+        break;
+    case Qt::Key_5 :
+        pianoPlayer[5]->setPosition(0);
+        pianoPlayer[5]->play();
+        break;
+    case Qt::Key_6 :
+        pianoPlayer[6]->setPosition(0);
+        pianoPlayer[6]->play();
+        break;
+    case Qt::Key_7 :
+        pianoPlayer[7]->setPosition(0);
+        pianoPlayer[7]->play();
+        break;
+    case Qt::Key_F1:
+        pianoPlayer[8]->setPosition(0);
+        pianoPlayer[8]->play();
+        break;
+    case Qt::Key_F2 :
+        pianoPlayer[9]->setPosition(0);
+        pianoPlayer[9]->play();
+        break;
+    case Qt::Key_F3 :
+        pianoPlayer[0]->setPosition(0);
+        pianoPlayer[0]->play();
+        break;
+    case Qt::Key_F4 :
+        pianoPlayer[10]->setPosition(0);
+        pianoPlayer[10]->play();
+        break;
+    case Qt::Key_F5 :
+        pianoPlayer[11]->setPosition(0);
+        pianoPlayer[11]->play();
+        break;
+    case Qt::Key_F6 :
+        pianoPlayer[12]->setPosition(0);
+        pianoPlayer[12]->play();
+        break;
+    case Qt::Key_F7 :
+        pianoPlayer[13]->setPosition(0);
+        pianoPlayer[13]->play();
+        break;
+    //case Qt::Key_A : ui->pushButton->move(x-10, y); break;
+
+    //case Qt::Key_D : ui->pushButton->move(x+10, y); break;
+default:break;
+    }
+    if(e->key()==Qt::Key_1)
+  ｛
+ if(e->key()==Qt::Key_0){
+
+     ｝
+                }
+
+          ｝
+
 }

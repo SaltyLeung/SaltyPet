@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT       += multimedia
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = SaltyPet
@@ -16,13 +16,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     fileop.cpp \
     data.cpp \
-    adventurewindow.cpp
+    adventurewindow.cpp \
+    sleep.cpp
 
 HEADERS  += mainwindow.h \
     fileop.h \
     datastreamop.h \
     data.h \
-    adventurewindow.h
+    adventurewindow.h \
+    sleep.h \
+    random.h
 
 FORMS    += mainwindow.ui \
     adventurewindow.ui

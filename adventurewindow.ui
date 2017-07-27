@@ -50,7 +50,7 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>390</y>
+      <y>410</y>
       <width>101</width>
       <height>141</height>
      </rect>
@@ -98,7 +98,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>390</y>
+      <y>410</y>
       <width>101</width>
       <height>141</height>
      </rect>
@@ -114,7 +114,7 @@
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>390</y>
+      <y>410</y>
       <width>101</width>
       <height>141</height>
      </rect>
@@ -130,7 +130,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>390</y>
+      <y>410</y>
       <width>101</width>
       <height>141</height>
      </rect>
@@ -146,7 +146,7 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>390</y>
+      <y>410</y>
       <width>101</width>
       <height>141</height>
      </rect>
@@ -646,9 +646,9 @@
    <widget class="QLabel" name="vsname">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>640</x>
       <y>110</y>
-      <width>81</width>
+      <width>211</width>
       <height>41</height>
      </rect>
     </property>
@@ -665,9 +665,9 @@
    <widget class="QLabel" name="myname">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>640</x>
       <y>260</y>
-      <width>81</width>
+      <width>221</width>
       <height>41</height>
      </rect>
     </property>
@@ -705,6 +705,204 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_1">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>329</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_2">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>330</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_3">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>330</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_4">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>330</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_5">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>330</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_6">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>170</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_7">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>170</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_8">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>170</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_9">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>170</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hp_10">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>170</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/hp);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>530</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>本关积累经验：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="exp">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>530</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
     </property>
    </widget>
    <zorder>blank_bg</zorder>
@@ -748,6 +946,18 @@
    <zorder>myname</zorder>
    <zorder>enemyCard_dis</zorder>
    <zorder>myCard_dis</zorder>
+   <zorder>hp_1</zorder>
+   <zorder>hp_2</zorder>
+   <zorder>hp_3</zorder>
+   <zorder>hp_4</zorder>
+   <zorder>hp_5</zorder>
+   <zorder>hp_6</zorder>
+   <zorder>hp_7</zorder>
+   <zorder>hp_8</zorder>
+   <zorder>hp_9</zorder>
+   <zorder>hp_10</zorder>
+   <zorder>label_7</zorder>
+   <zorder>exp</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -404,6 +404,22 @@
      <string>N/A</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="music_button">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>480</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/music/music_on);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>feed_button</zorder>
    <zorder>bath_button</zorder>
@@ -425,6 +441,7 @@
    <zorder>coin</zorder>
    <zorder>gender</zorder>
    <zorder>period</zorder>
+   <zorder>music_button</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

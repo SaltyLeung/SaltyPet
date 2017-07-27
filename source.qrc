@@ -40,8 +40,32 @@
         <file alias="card_34">src/image/card_34.png</file>
         <file alias="card_35">src/image/card_35.png</file>
         <file alias="card_36">src/image/card_36.png</file>
+        <file alias="hp">src/image/HP.png</file>
+        <file alias="none">src/image/none.png</file>
     </qresource>
     <qresource prefix="/TTF">
         <file alias="FZXS">src/ttf/FZXS24.TTF</file>
+    </qresource>
+    <qresource prefix="/music">
+        <file alias="Abandoncity">src/music/AbandonCity.mp3</file>
+        <file alias="ShootingTown">src/music/ShootingTown.mp3</file>
+        <file alias="music_off">src/image/music_off.png</file>
+        <file alias="music_on">src/image/music_on.png</file>
+    </qresource>
+    <qresource prefix="/piano">
+        <file alias="12">src/music/piano/A 4.mp3</file>
+        <file alias="13">src/music/piano/B 4.mp3</file>
+        <file alias="8">src/music/piano/C 4.mp3</file>
+        <file alias="1">src/music/piano/c3.mp3</file>
+        <file alias="9">src/music/piano/D 4.mp3</file>
+        <file alias="2">src/music/piano/d3.mp3</file>
+        <file alias="3">src/music/piano/E 3.mp3</file>
+        <file alias="0">src/music/piano/E 4.mp3</file>
+        <file alias="4">src/music/piano/F 3.mp3</file>
+        <file alias="5">src/music/piano/G 3.mp3</file>
+        <file alias="6">src/music/piano/A 3.mp3</file>
+        <file alias="7">src/music/piano/B 3.mp3</file>
+        <file alias="10">src/music/piano/F 4.mp3</file>
+        <file alias="11">src/music/piano/G 4.mp3</file>
     </qresource>
 </RCC>

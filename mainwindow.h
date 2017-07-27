@@ -3,6 +3,10 @@
 #include"data.h"
 //#include"adventurewindow.h"
 #include <QMainWindow>
+#include<QApplication>
+#include<QtMultimedia/QMediaPlayer>
+#include <QKeyEvent>
+#include"sleep.h"
 namespace Ui {
 class MainWindow;
 }
@@ -18,11 +22,17 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QMediaPlayer* player;
+    QMediaPlayer* pianoPlayer[14];
+    void keyPressEvent(QKeyEvent *);
 private slots:
     void bath_clicked();
     void feed_clicked();
     void adventure_clicked();
     void dataUpdate();
+    void music_clicked();
 
 };
+
+
 #endif // MAINWINDOW_H

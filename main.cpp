@@ -5,6 +5,8 @@
 #include<QMessageBox>
 #include<QFontDatabase>
 #include<QFont>
+#include"random.h"
+#include<QtMultimedia/QMediaPlayer>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -33,6 +35,5 @@ int main(int argc, char *argv[])
             animation->setEndValue(1);
             animation->start();
     w.show();
-
     return a.exec();
 }
