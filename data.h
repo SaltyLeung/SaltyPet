@@ -26,7 +26,7 @@ public:
     bool getGender() const;
     int getStatus() const;
     int getPeriod() const;
-
+    void levelCheck();
     int level;
     QString name;
     int attribute;//0 for none;1 for fire; 2 for ice;
@@ -37,7 +37,6 @@ public:
     int period;//0 egg;1 little
 signals:
     void dataChanged();
-public slots:
 };
 
 #endif // DATA_H

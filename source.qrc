@@ -42,6 +42,16 @@
         <file alias="card_36">src/image/card_36.png</file>
         <file alias="hp">src/image/HP.png</file>
         <file alias="none">src/image/none.png</file>
+        <file alias="develop">src/image/development.png</file>
+        <file alias="develop_hover">src/image/development_hover.png</file>
+        <file alias="finger">src/image/finger.png</file>
+        <file alias="finger_hover">src/image/finger_hover.png</file>
+        <file alias="help">src/image/help.png</file>
+        <file alias="help_hover">src/image/help_hover.png</file>
+        <file alias="skill">src/image/skill.png</file>
+        <file alias="skill_hover">src/image/skill_hover.png</file>
+        <file alias="double">src/image/double_dragon.png</file>
+        <file alias="see">src/image/see.png</file>
     </qresource>
     <qresource prefix="/TTF">
         <file alias="FZXS">src/ttf/FZXS24.TTF</file>
@@ -67,5 +77,21 @@
         <file alias="7">src/music/piano/B 3.mp3</file>
         <file alias="10">src/music/piano/F 4.mp3</file>
         <file alias="11">src/music/piano/G 4.mp3</file>
+    </qresource>
+    <qresource prefix="/note">
+        <file alias="1">src/image/note/1.png</file>
+        <file alias="2">src/image/note/2.png</file>
+        <file alias="3">src/image/note/3.png</file>
+        <file alias="4">src/image/note/4.png</file>
+        <file alias="5">src/image/note/5.png</file>
+        <file alias="6">src/image/note/6.png</file>
+        <file alias="7">src/image/note/7.png</file>
+        <file alias="8">src/image/note/h1.png</file>
+        <file alias="9">src/image/note/h2.png</file>
+        <file alias="10">src/image/note/h3.png</file>
+        <file alias="11">src/image/note/h4.png</file>
+        <file alias="12">src/image/note/h5.png</file>
+        <file alias="13">src/image/note/h6.png</file>
+        <file alias="14">src/image/note/h7.png</file>
     </qresource>
 </RCC>

@@ -1,5 +1,5 @@
 #include "data.h"
-
+#include<cmath>
 Data::Data(QObject *parent) : QObject(parent)
 {
     setLevel(0);
@@ -96,4 +96,10 @@ int Data::getStatus() const
 int Data::getPeriod() const
 {
     return period;
+}
+
+void Data::levelCheck()
+{
+    if(exp>pow(2,(level+1)))
+        setLevel(level+1);
 }

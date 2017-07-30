@@ -1,19 +1,27 @@
 #include "adventurewindow.h"
 #include "ui_adventurewindow.h"
+#include"dialog.h"
+#include"dialog2.h"
 #include<QTime>
+#include<cmath>
 #include<QDebug>
 #include<QAction>
 #include<QSignalMapper>
 #include<QPropertyAnimation>
 #include<QGraphicsOpacityEffect>
 #include"random.h"
-AdventureWindow::AdventureWindow(MainWindow* wptr,QWidget *parent) :
-    QMainWindow(parent),w(wptr),
+#include<QPixmap>
+AdventureWindow::AdventureWindow(MainWindow* wptr,int acexp,int stg,QWidget *parent) :
+    QMainWindow(parent),w(wptr),acExp(acexp),stage(stg),
     ui(new Ui::AdventureWindow)
 {
-
+    thisExp=pow(2,stage-1);
+    for(int i=0;i<=4;++i)
+    validVS[i]=true;
+    //this->setWindowFlags(Qt::FramelessWindowHint);
     ui->setupUi(this);
     ui->myname->setText(w->dataPtr->name);
+    ui->exp->setText(QString::number(acExp));
     myHP=5;
     vsHP=5;
     for(int i=0;i<=4;++i) up[i]=0;
@@ -26,9 +34,9 @@ AdventureWindow::AdventureWindow(MainWindow* wptr,QWidget *parent) :
     for(int x=0;x<=4;++x)
     {
             myCardPoint[x][0]=qrand()%4;
-            //vsCardPoint[x][0]=qrand()%4;
-            myCardPoint[x][1]=1+qrand()%6;
-            //vsCardPoint[x][1]=1+qrand()%6;
+            vsCardPoint[x][0]=qrand()%4;
+            myCardPoint[x][1]=6;//1+qrand()%6;
+            vsCardPoint[x][1]=1+qrand()%6;
     }
     myCard[0]= ui->mycard_1;
     myCard[1]= ui->mycard_2;
@@ -87,6 +95,7 @@ AdventureWindow::AdventureWindow(MainWindow* wptr,QWidget *parent) :
     QObject::connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(chooseCard(int)));
     QObject::connect(ui->discard, SIGNAL(clicked()), this, SLOT(discard()));
     QObject::connect(ui->return_button, SIGNAL(clicked()), this, SLOT(quit()));
+    QObject::connect(ui->see, SIGNAL(clicked()), this, SLOT(see()));
     //QObject::connect(ui->card_button_1, SIGNAL(clicked()), this, SLOT(chooseCard(0)));
     //QObject::connect(ui->card_button_2, SIGNAL(clicked()), this, SLOT(chooseCard(1)));
     //QObject::connect(ui->card_button_3, SIGNAL(clicked()), this, SLOT(chooseCard(2)));
@@ -103,11 +112,14 @@ AdventureWindow::~AdventureWindow()
     delete this;
 
 }
+
 void AdventureWindow::quit()
 {
+    w->dataPtr->setExp(w->dataPtr->exp+acExp);
     w->show();
     this->close();
 }
+
 void AdventureWindow::chooseCard(int x)
 {
     qDebug()<<x;
@@ -147,8 +159,18 @@ void AdventureWindow::discard()
     //if (clear==true) return;
     int mySuit=0;
     int myNum=1;
-    int vsSuit=qrand()%4;;
-    int vsNum=1+qrand()%6;
+    int random;
+    while(true)
+    {
+        random=qrand()%5;
+        if(validVS[random]==true)
+        {
+            validVS[random]=false;
+            break;
+        }
+    }
+    int vsSuit=vsCardPoint[random][0];
+    int vsNum=vsCardPoint[random][1];
     for(int i=0;i<=4;++i)
     {
         if(up[i]==1)
@@ -157,12 +179,32 @@ void AdventureWindow::discard()
             //QString myCardSheet="QPushbutton{background-color: rgba(0, 0, 0, 0);}";
             //myCard[i]->setStyleSheet(myCardSheet);
             myCard[i]->setVisible(false);
+            switch(i){
+            case 0:
+                delete ui->card_button_1;
+                break;
+            case 1:
+                delete ui->card_button_2;
+                break;
+            case 2:
+                delete ui->card_button_3;
+                break;
+            case 3:
+                delete ui->card_button_4;
+                break;
+            case 4:
+                delete ui->card_button_5;
+                break;
+            default:break;
+
+            }
+
             card_button[i]->setEnabled(false);
             mySuit=myCardPoint[i][0];
             myNum=myCardPoint[i][1];
         }
     }
-    vsCard[vsRemain-1]->setVisible((false));
+    vsCard[random]->setVisible((false));
     vsRemain-=1;
     QString vsCardSheet="QLabel{border-image: url(:/image/card_bg);}";
     ui->myCard_dis->setStyleSheet(vsCardSheet);
@@ -191,13 +233,9 @@ void AdventureWindow::discard()
          ui->enemyCard_dis->setGraphicsEffect(effect2);
     sleep(200);
     }
-    ui->discard->setEnabled(true);
-    if(vsRemain<=0){
-        ui->discard->setEnabled(false);
-        vsRemain=5;
-    }
     delete effect1;
     delete effect2;
+
     if(myNum>vsNum) vsHPdecrease();
     else if(myNum<vsNum)myHPdecrease();
     else
@@ -210,9 +248,55 @@ void AdventureWindow::discard()
         else if(mySuit>vsSuit)vsHPdecrease();
         else myHPdecrease();
     }
+    if(vsRemain<=0){
+        ui->discard->setEnabled(false);
+        sleep(1000);
+        if(myHP>vsHP)
+        {
+            Dialog* dialog=new Dialog(this);
+            dialog->exec();
+        }
+        else if(myHP<vsHP)
+        {
+            Dialog2* dialog2=new Dialog2(this);
+            dialog2->exec();
+        }
+        vsRemain=5;
+        return;
+    }
+    if(myHP==0||vsHP==0){
+        ui->discard->setEnabled(false);
+        sleep(1000);
+        if(vsHP==0)
+        {
+            Dialog* dialog=new Dialog(this);
+            dialog->exec();
+        }
+        else if(myHP==0)
+        {
+            Dialog2* dialog2=new Dialog2(this);
+            dialog2->exec();
+        }
+        vsRemain=5;
+        return;
+    }
 
+    ui->discard->setEnabled(true);
 }
 
+void AdventureWindow::see()
+{
+    for(int i=0;i<=4;++i)
+    {
+        QPixmap pixmap(":/image/card_"+QString::number (vsCardPoint[i][0])+QString::number (vsCardPoint[i][1]));
+        //QString myCardSheet="QPushButton{border-image: url(:/image/card_"+QString::number (vsCardPoint[i][0])+QString::number (vsCardPoint[i][1])+");}";
+        //vsCard[i]->setStyleSheet(myCardSheet);
+        QMatrix leftmatrix;
+        leftmatrix.rotate(180);
+        vsCard[i]->setIcon(pixmap.transformed(leftmatrix,Qt::SmoothTransformation));
+        vsCard[i]->setIconSize(QSize(101,141));
+    }
+}
 
 void AdventureWindow::actionOneSlot()
 {

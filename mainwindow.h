@@ -31,6 +31,10 @@ private slots:
     void adventure_clicked();
     void dataUpdate();
     void music_clicked();
+    void finger_clicked();
+    void help_clicked();
+    void skill_clicked();
+    void develop_clicked();
 
 };
 
