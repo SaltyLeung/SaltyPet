@@ -177,16 +177,39 @@ void MainWindow::dataUpdate()
      switch(dataPtr->period)
      {
      case 0:
+         ui->period->setStyleSheet("QLabel{color: rgb(0, 0, 0);}");
          period="Egg";
          break;
      case 1:
-         period="Little Cat";
+         ui->period->setStyleSheet("QLabel{color: rgb(0, 0, 0);}");
+         period="Ball Cat";
      break;
      case 2:
-         period="Middle Cat";
+         ui->period->setStyleSheet("QLabel{color: rgb(0, 0, 0);}");
+         period="Small Cat";
          break;
      case 3:
-         period="Big Cat";
+         ui->period->setStyleSheet("QLabel{color: rgb(0, 0, 0);}");
+         period="Fake Tailmon";
+         break;
+     case 4:
+         ui->period->setStyleSheet("QLabel{color: rgb(255, 0, 0);}");
+         period="Burst Fire";
+     case 5:
+         ui->period->setStyleSheet("QLabel{color: rgb(255, 0, 255);}");
+         period="Ghost";
+     case 6:
+         ui->period->setStyleSheet("QLabel{color: rgb(0, 0, 255);}");
+         period="Enternal Blizzard";
+     case 7:
+         ui->period->setStyleSheet("QLabel{color: rgb(255, 0, 0);}");
+         period="Red Coat";
+     case 8:
+         ui->period->setStyleSheet("QLabel{color: rgb(255, 0, 255);}");
+         period="Elder";
+     case 9:
+         ui->period->setStyleSheet("QLabel{color: rgb(0, 0, 255);}");
+         period="Hallace";
          break;
      default:
          period="Crazy Cat";

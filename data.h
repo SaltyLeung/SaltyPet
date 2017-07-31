@@ -34,7 +34,7 @@ public:
     int coin;
     bool gender;//true=man;false=female
     int status;//0 normal;1 hungry;2 dirty;3 both
-    int period;//0 egg;1 little
+    int period;//0 egg; 1 little; 2 small; 3 dilu; 4 fire; 5 chao; 6 cold; 7 red; 8 old; 9 ha
     bool see;
     bool doubleDragon;
 signals:
