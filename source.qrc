@@ -52,6 +52,34 @@
         <file alias="skill_hover">src/image/skill_hover.png</file>
         <file alias="double">src/image/double_dragon.png</file>
         <file alias="see">src/image/see.png</file>
+        <file alias="card_07">src/image/card_07.png</file>
+        <file alias="card_08">src/image/card_08.png</file>
+        <file alias="card_09">src/image/card_09.png</file>
+        <file alias="card_010">src/image/card_010.png</file>
+        <file alias="card_011">src/image/card_011.png</file>
+        <file alias="card_012">src/image/card_012.png</file>
+        <file alias="card_013">src/image/card_013.png</file>
+        <file alias="card_17">src/image/card_17.png</file>
+        <file alias="card_18">src/image/card_18.png</file>
+        <file alias="card_19">src/image/card_19.png</file>
+        <file alias="card_27">src/image/card_27.png</file>
+        <file alias="card_28">src/image/card_28.png</file>
+        <file alias="card_29">src/image/card_29.png</file>
+        <file alias="card_37">src/image/card_37.png</file>
+        <file alias="card_38">src/image/card_38.png</file>
+        <file alias="card_39">src/image/card_39.png</file>
+        <file alias="card_110">src/image/card_110.png</file>
+        <file alias="card_111">src/image/card_111.png</file>
+        <file alias="card_112">src/image/card_112.png</file>
+        <file alias="card_113">src/image/card_113.png</file>
+        <file alias="card_210">src/image/card_210.png</file>
+        <file alias="card_211">src/image/card_211.png</file>
+        <file alias="card_212">src/image/card_212.png</file>
+        <file alias="card_213">src/image/card_213.png</file>
+        <file alias="card_310">src/image/card_310.png</file>
+        <file alias="card_311">src/image/card_311.png</file>
+        <file alias="card_312">src/image/card_312.png</file>
+        <file alias="card_313">src/image/card_313.png</file>
     </qresource>
     <qresource prefix="/TTF">
         <file alias="FZXS">src/ttf/FZXS24.TTF</file>
@@ -77,6 +105,9 @@
         <file alias="7">src/music/piano/B 3.mp3</file>
         <file alias="10">src/music/piano/F 4.mp3</file>
         <file alias="11">src/music/piano/G 4.mp3</file>
+        <file alias="mission">src/image/mission.png</file>
+        <file alias="sky">src/image/sky.png</file>
+        <file alias="youngbook">src/image/youngbook.png</file>
     </qresource>
     <qresource prefix="/note">
         <file alias="1">src/image/note/1.png</file>

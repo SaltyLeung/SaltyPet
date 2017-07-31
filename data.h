@@ -35,6 +35,8 @@ public:
     bool gender;//true=man;false=female
     int status;//0 normal;1 hungry;2 dirty;3 both
     int period;//0 egg;1 little
+    bool see;
+    bool doubleDragon;
 signals:
     void dataChanged();
 };

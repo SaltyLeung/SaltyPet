@@ -708,6 +708,25 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="see_learn">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>480</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>已习得 洞察术！</string>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>feed_button</zorder>
    <zorder>bath_button</zorder>
@@ -748,6 +767,7 @@
    <zorder>finger</zorder>
    <zorder>develop</zorder>
    <zorder>help</zorder>
+   <zorder>see_learn</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

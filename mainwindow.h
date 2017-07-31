@@ -19,12 +19,13 @@ public:
     explicit MainWindow(Data*,QWidget *parent = 0);
     ~MainWindow();
     Data* dataPtr;
+    void keyPressEvent(QKeyEvent *);
 
 private:
     Ui::MainWindow *ui;
     QMediaPlayer* player;
     QMediaPlayer* pianoPlayer[14];
-    void keyPressEvent(QKeyEvent *);
+     int s1process;
 private slots:
     void bath_clicked();
     void feed_clicked();
@@ -35,6 +36,7 @@ private slots:
     void help_clicked();
     void skill_clicked();
     void develop_clicked();
+    void song1_check(int);
 
 };
 

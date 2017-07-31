@@ -19,7 +19,9 @@ SOURCES += main.cpp\
     adventurewindow.cpp \
     sleep.cpp \
     dialog.cpp \
-    dialog2.cpp
+    dialog2.cpp \
+    skill.cpp \
+    develop.cpp
 
 HEADERS  += mainwindow.h \
     fileop.h \
@@ -29,12 +31,16 @@ HEADERS  += mainwindow.h \
     sleep.h \
     random.h \
     dialog.h \
-    dialog2.h
+    dialog2.h \
+    skill.h \
+    develop.h
 
 FORMS    += mainwindow.ui \
     adventurewindow.ui \
     dialog.ui \
-    dialog2.ui
+    dialog2.ui \
+    skill.ui \
+    develop.ui
 
 RESOURCES += \
     source.qrc

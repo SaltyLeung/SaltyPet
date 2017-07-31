@@ -15,13 +15,18 @@ AdventureWindow::AdventureWindow(MainWindow* wptr,int acexp,int stg,QWidget *par
     QMainWindow(parent),w(wptr),acExp(acexp),stage(stg),
     ui(new Ui::AdventureWindow)
 {
+    this->setWindowTitle("Adventure");
+
     thisExp=pow(2,stage-1);
+
     for(int i=0;i<=4;++i)
     validVS[i]=true;
     //this->setWindowFlags(Qt::FramelessWindowHint);
     ui->setupUi(this);
     ui->myname->setText(w->dataPtr->name);
     ui->exp->setText(QString::number(acExp));
+    if(w->dataPtr->see==false)
+        ui->see->setEnabled(false);
     myHP=5;
     vsHP=5;
     for(int i=0;i<=4;++i) up[i]=0;
@@ -35,8 +40,8 @@ AdventureWindow::AdventureWindow(MainWindow* wptr,int acexp,int stg,QWidget *par
     {
             myCardPoint[x][0]=qrand()%4;
             vsCardPoint[x][0]=qrand()%4;
-            myCardPoint[x][1]=6;//1+qrand()%6;
-            vsCardPoint[x][1]=1+qrand()%6;
+            myCardPoint[x][1]=1+qrand()%13;
+            vsCardPoint[x][1]=1+qrand()%13;
     }
     myCard[0]= ui->mycard_1;
     myCard[1]= ui->mycard_2;
@@ -82,7 +87,7 @@ AdventureWindow::AdventureWindow(MainWindow* wptr,int acexp,int stg,QWidget *par
     //ui->card_button_1->addAction(new QAction(tr("discard"),this));      //下拉菜单
     signalMapper = new QSignalMapper(this);
 
-   QObject:: connect(ui->card_button_1, SIGNAL(clicked()), signalMapper, SLOT(map()));
+    QObject:: connect(ui->card_button_1, SIGNAL(clicked()), signalMapper, SLOT(map()));
     QObject::connect(ui->card_button_2, SIGNAL(clicked()), signalMapper, SLOT(map()));
     QObject::connect(ui->card_button_3, SIGNAL(clicked()), signalMapper, SLOT(map()));
     QObject::connect(ui->card_button_4, SIGNAL(clicked()), signalMapper, SLOT(map()));

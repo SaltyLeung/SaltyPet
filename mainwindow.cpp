@@ -7,6 +7,8 @@
 #include<QSignalMapper>
 #include<QGraphicsOpacityEffect>
 #include<QPropertyAnimation>
+#include"skill.h"
+#include"develop.h"
 //#define level getLevel()
 //#define name getName()
 //#define attribute getAttribute()
@@ -19,6 +21,7 @@ MainWindow::MainWindow(Data *gameData,QWidget *parent) :
     QMainWindow(parent),dataPtr(gameData),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->see_learn->setVisible(false);
     ui->note_1->setVisible(false);
     ui->note_2->setVisible(false);
     ui->note_3->setVisible(false);
@@ -76,7 +79,7 @@ MainWindow::MainWindow(Data *gameData,QWidget *parent) :
         pianoPlayer[i]->setMedia(QUrl(url));
         pianoPlayer[i]->setVolume(30);
      }
-
+    s1process=0;
 }
 
 
@@ -206,12 +209,16 @@ void MainWindow::help_clicked()
 
 void MainWindow::skill_clicked()
 {
-
+     Skill *skl=new Skill(this);
+     (*skl).setWindowFlags(windowFlags()&~ (Qt::FramelessWindowHint|Qt::WindowMinMaxButtonsHint));
+     (*skl).show();
 }
 
 void MainWindow::develop_clicked()
 {
-
+    develop*dvl=new develop(this);
+    (*dvl).setWindowFlags(windowFlags()&~ (Qt::FramelessWindowHint|Qt::WindowMinMaxButtonsHint));
+    (*dvl).show();
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *e)
@@ -364,6 +371,36 @@ void MainWindow::keyPressEvent(QKeyEvent *e)
         dataPtr->setExp(dataPtr->exp+1);
         count=0;
     }
+    song1_check(e->key());
+    //qDebug()<<count;
+}
 
-    qDebug()<<count;
+void MainWindow::song1_check(int key)
+{
+    static int song1[8]={Qt::Key_6,Qt::Key_6,Qt::Key_F1,Qt::Key_F2,Qt::Key_6,Qt::Key_6,Qt::Key_5,Qt::Key_6};
+    if(s1process>=8)
+        return;
+    if(key==song1[s1process])
+        s1process+=1;
+    else  s1process=0;
+
+    qDebug()<<s1process;
+    if(s1process==8)
+    {
+        dataPtr->see=true;
+        static QGraphicsOpacityEffect *effect;
+        effect=new QGraphicsOpacityEffect();
+        effect->setOpacity(0);
+        ui->see_learn->setVisible(true);
+        ui->see_learn->setGraphicsEffect(effect);
+            QPropertyAnimation*m_animation= new QPropertyAnimation(effect,"opacity",effect);
+            m_animation->setStartValue(0);
+            m_animation->setKeyValueAt(0.3, 1);
+            m_animation->setKeyValueAt(0.7, 1);
+            m_animation->setEndValue(0);
+            m_animation->setDuration(1200);
+            m_animation->start();
+            qDebug()<<"s1process";
+    }
+    return;
 }

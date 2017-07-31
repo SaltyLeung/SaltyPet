@@ -10,6 +10,8 @@ Data::Data(QObject *parent) : QObject(parent)
     setGender(true);//true=man;false=female
     setStatus(0);//0 normal;1 hungry;2 dirty;3 both
     setPeriod(0);//0 egg;1 little
+    see=false;
+    doubleDragon=false;
 }
 void Data::setLevel(int x)
 {
