@@ -1,7 +1,7 @@
 #include "skill.h"
 #include "ui_skill.h"
-Skill::Skill(MainWindow* w, QWidget *parent) :
-    QDialog(parent),
+Skill::Skill(MainWindow* wptr, QWidget *parent) :
+    w(wptr),QDialog(parent),
     ui(new Ui::Skill)
 {
     ui->setupUi(this);
@@ -56,5 +56,5 @@ void Skill::dragon()
 
  void Skill::keyPressEvent(QKeyEvent *e)
  {
-        //w->keyPressEvent(e);
+        w->keyPressEvent(e);
  }

@@ -94,7 +94,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="pet">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -219,7 +219,7 @@
      <rect>
       <x>700</x>
       <y>20</y>
-      <width>101</width>
+      <width>191</width>
       <height>51</height>
      </rect>
     </property>
@@ -276,7 +276,7 @@
      <rect>
       <x>570</x>
       <y>120</y>
-      <width>251</width>
+      <width>311</width>
       <height>51</height>
      </rect>
     </property>
@@ -390,7 +390,7 @@
      <rect>
       <x>570</x>
       <y>170</y>
-      <width>191</width>
+      <width>321</width>
       <height>51</height>
      </rect>
     </property>
@@ -711,7 +711,7 @@
    <widget class="QLabel" name="see_learn">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>540</x>
       <y>480</y>
       <width>211</width>
       <height>41</height>
@@ -727,12 +727,220 @@
      <string>已习得 洞察术！</string>
     </property>
    </widget>
+   <widget class="QLabel" name="dragon_learn">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>480</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>已习得 双龙出海！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="develop_little">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>480</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>已进化为 可爱的小猫团！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="develop_small">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>480</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>已进化为 淘气的小猫咪！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="develop_dilu">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>480</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>已进化为 伪迪路兽！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="develop_fire">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>480</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 85, 0);</string>
+    </property>
+    <property name="text">
+     <string>已进化为 暴脾气的小火喵！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="develop_ghost">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>480</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(85, 0, 255);</string>
+    </property>
+    <property name="text">
+     <string>已进化为 游魂野喵！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="develop_ice">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>480</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 255);</string>
+    </property>
+    <property name="text">
+     <string>已进化为 很高冷的小冰喵！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="develop_red">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>480</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>已进化为 红衣！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="develop_old">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>480</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(170, 170, 127);</string>
+    </property>
+    <property name="text">
+     <string>已进化为 长者！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="develop_ha">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>480</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正像素24</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(85, 170, 255);</string>
+    </property>
+    <property name="text">
+     <string>已进化为 蛤莱士！</string>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>feed_button</zorder>
    <zorder>bath_button</zorder>
    <zorder>adventure_button</zorder>
    <zorder>label</zorder>
-   <zorder>label_3</zorder>
+   <zorder>pet</zorder>
    <zorder>label_4</zorder>
    <zorder>label_5</zorder>
    <zorder>label_6</zorder>
@@ -768,6 +976,16 @@
    <zorder>develop</zorder>
    <zorder>help</zorder>
    <zorder>see_learn</zorder>
+   <zorder>dragon_learn</zorder>
+   <zorder>develop_little</zorder>
+   <zorder>develop_small</zorder>
+   <zorder>develop_dilu</zorder>
+   <zorder>develop_fire</zorder>
+   <zorder>develop_ghost</zorder>
+   <zorder>develop_ice</zorder>
+   <zorder>develop_red</zorder>
+   <zorder>develop_old</zorder>
+   <zorder>develop_ha</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

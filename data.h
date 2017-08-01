@@ -17,6 +17,8 @@ public:
     void setGender(bool);
     void setStatus(int);
     void setPeriod(int);
+    void setHungry(int);
+    void setDirty(int);
 
     int getLevel() const;
     QString getName() const;
@@ -37,6 +39,8 @@ public:
     int period;//0 egg; 1 little; 2 small; 3 dilu; 4 fire; 5 chao; 6 cold; 7 red; 8 old; 9 ha
     bool see;
     bool doubleDragon;
+    int hungry;
+    int dirty;
 signals:
     void dataChanged();
 };

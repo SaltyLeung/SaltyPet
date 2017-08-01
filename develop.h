@@ -18,6 +18,7 @@ public:
 private:
     Ui::develop *ui;
     MainWindow* w;
+    void keyPressEvent(QKeyEvent *e);
 private slots:
    void littleCat_click();
    void smallCat_click();

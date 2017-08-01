@@ -54,46 +54,76 @@ void develop::littleCat_click()
     //w->dataPtr->setPeriod(1);
     ui->tips->setVisible(true);
     ui->tips_2->setVisible(true);
-    //ui->songNote->setStyleSheet();
+    ui->songNote->setStyleSheet("QLabel{border-image: url(:/song/animal)}");
     ui->songNote->setVisible(true);
 }
 
 void develop::smallCat_click()
 {
-    w->dataPtr->setPeriod(2);
+    ui->tips->setVisible(true);
+    ui->tips_2->setVisible(true);
+     ui->songNote->setStyleSheet("QLabel{border-image: url(:/song/bottle)}");
+    ui->songNote->setVisible(true);
 }
 
 void develop::dilu_click()
 {
-    w->dataPtr->setPeriod(3);
+    ui->tips->setVisible(true);
+    ui->tips_2->setVisible(true);
+     ui->songNote->setStyleSheet("QLabel{border-image: url(:/song/boy)}");
+    ui->songNote->setVisible(true);
 }
 
 void develop::iceCat_click()
 {
-    w->dataPtr->setPeriod(6);
+    ui->tips->setVisible(true);
+    ui->tips_2->setVisible(true);
+     ui->songNote->setStyleSheet("QLabel{border-image: url(:/song/mate)}");
+    ui->songNote->setVisible(true);
 }
 
 void develop::ghostCat_click()
 {
-    w->dataPtr->setPeriod(5);
+    ui->tips->setVisible(true);
+    ui->tips_2->setVisible(true);
+     ui->songNote->setStyleSheet("QLabel{border-image: url(:/song/national)}");
+    ui->songNote->setVisible(true);
 }
 
 void develop::fireCat_click()
 {
-    w->dataPtr->setPeriod(4);
+    ui->tips->setVisible(true);
+    ui->tips_2->setVisible(true);
+     ui->songNote->setStyleSheet("QLabel{border-image: url(:/song/onetime)}");
+    ui->songNote->setVisible(true);
 }
 
 void develop::redCoat_click()
 {
-    w->dataPtr->setPeriod(7);
+    ui->tips->setVisible(true);
+    ui->tips_2->setVisible(true);
+     ui->songNote->setStyleSheet("QLabel{border-image: url(:/song/scut)}");
+    ui->songNote->setVisible(true);
 }
 
 void develop::old_click()
 {
-    w->dataPtr->setPeriod(8);
+    ui->tips->setVisible(true);
+    ui->tips_2->setVisible(true);
+     ui->songNote->setStyleSheet("QLabel{border-image: url(:/song/secret)}");
+    ui->songNote->setVisible(true);
 }
 
 void develop::ha_click()
 {
-    w->dataPtr->setPeriod(9);
+    ui->tips->setVisible(true);
+    ui->tips_2->setVisible(true);
+     ui->songNote->setStyleSheet("QLabel{border-image: url(:/song/snake)}");
+    ui->songNote->setVisible(true);
 }
+
+void develop::keyPressEvent(QKeyEvent *e)
+{
+       w->keyPressEvent(e);
+}
+

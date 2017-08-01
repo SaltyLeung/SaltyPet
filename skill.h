@@ -18,7 +18,7 @@ public:
 private:
     Ui::Skill *ui;
     void keyPressEvent(QKeyEvent *);
-    //MainWindow* w;
+    MainWindow* w;
 private slots:
     void see();
     void dragon();

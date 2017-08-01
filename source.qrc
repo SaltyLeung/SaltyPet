@@ -80,6 +80,15 @@
         <file alias="card_311">src/image/card_311.png</file>
         <file alias="card_312">src/image/card_312.png</file>
         <file alias="card_313">src/image/card_313.png</file>
+        <file alias="pet_dilu">src/image/pet_dilu.png</file>
+        <file alias="pet_fire">src/image/pet_fire.png</file>
+        <file alias="pet_ghost">src/image/pet_ghost.png</file>
+        <file alias="pet_hallice">src/image/pet_hallice.png</file>
+        <file alias="pet_ice">src/image/pet_ice.png</file>
+        <file alias="pet_little">src/image/pet_little.png</file>
+        <file alias="pet_old">src/image/pet_old.png</file>
+        <file alias="pet_red">src/image/pet_red.png</file>
+        <file alias="pet_small">src/image/pet_small.png</file>
     </qresource>
     <qresource prefix="/TTF">
         <file alias="FZXS">src/ttf/FZXS24.TTF</file>
@@ -124,5 +133,19 @@
         <file alias="12">src/image/note/h5.png</file>
         <file alias="13">src/image/note/h6.png</file>
         <file alias="14">src/image/note/h7.png</file>
+    </qresource>
+    <qresource prefix="/song">
+        <file alias="animal">src/image/song/animal.png</file>
+        <file alias="bottle">src/image/song/bottle.png</file>
+        <file alias="boy">src/image/song/boy.png</file>
+        <file alias="mate">src/image/song/mate.png</file>
+        <file alias="national">src/image/song/national.png</file>
+        <file alias="onetime">src/image/song/onetime.png</file>
+        <file alias="scut">src/image/song/scut.png</file>
+        <file alias="secret">src/image/song/secret.png</file>
+        <file alias="sky">src/image/song/sky.png</file>
+        <file alias="snake">src/image/song/snake.png</file>
+        <file alias="tenyear">src/image/song/tenyear.png</file>
+        <file alias="youngbook">src/image/song/youngbook.png</file>
     </qresource>
 </RCC>
