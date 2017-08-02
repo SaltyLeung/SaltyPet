@@ -38,7 +38,7 @@ private:
      int s11process;
      int s12process;
 
-private slots:
+public slots:
     void bath_clicked();
     void feed_clicked();
     void adventure_clicked();

@@ -22,7 +22,10 @@ SOURCES += main.cpp\
     dialog2.cpp \
     skill.cpp \
     develop.cpp \
-    help.cpp
+    help.cpp \
+    welcome.cpp \
+    introduce.cpp \
+    name.cpp
 
 HEADERS  += mainwindow.h \
     fileop.h \
@@ -35,7 +38,10 @@ HEADERS  += mainwindow.h \
     dialog2.h \
     skill.h \
     develop.h \
-    help.h
+    help.h \
+    welcome.h \
+    introduce.h \
+    name.h
 
 FORMS    += mainwindow.ui \
     adventurewindow.ui \
@@ -43,7 +49,10 @@ FORMS    += mainwindow.ui \
     dialog2.ui \
     skill.ui \
     develop.ui \
-    help.ui
+    help.ui \
+    welcome.ui \
+    introduce.ui \
+    name.ui
 
 RESOURCES += \
     source.qrc

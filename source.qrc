@@ -150,4 +150,21 @@
         <file alias="tenyear">src/image/song/tenyear.png</file>
         <file alias="youngbook">src/image/song/youngbook.png</file>
     </qresource>
+    <qresource prefix="/ui">
+        <file alias="load">src/image/ui/load.png</file>
+        <file alias="load_press">src/image/ui/load_press.png</file>
+        <file alias="start">src/image/ui/start.png</file>
+        <file alias="start_press">src/image/ui/start_press.png</file>
+        <file alias="zmj">src/image/ui/zmj.png</file>
+        <file alias="arrow">src/image/ui/arrow.png</file>
+        <file alias="p1">src/image/ui/P1.png</file>
+        <file alias="p2">src/image/ui/p2.png</file>
+        <file alias="p3">src/image/ui/P3.png</file>
+        <file alias="p4">src/image/ui/P4.png</file>
+        <file alias="p5">src/image/ui/P5.png</file>
+        <file alias="p6">src/image/ui/P6.png</file>
+        <file alias="p7">src/image/ui/P7.png</file>
+        <file alias="p8">src/image/ui/P8.png</file>
+        <file alias="talk_bg">src/image/ui/talk_bg.png</file>
+    </qresource>
 </RCC>
