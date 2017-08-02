@@ -32,6 +32,7 @@ private:
     QSignalMapper *signalMapper;
     int myHP;
     int vsHP;
+    bool dragonOn;
    void myHPdecrease();
    void vsHPdecrease();
     //QAction *m_actionOne;
@@ -39,6 +40,7 @@ private:
     //QAction *m_actionThree;
 public slots:
     void see();
+    void dragon();
     void quit();
     void chooseCard(int);
     void discard();

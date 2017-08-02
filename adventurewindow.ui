@@ -921,6 +921,22 @@
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="double_dragon">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>490</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/double);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>blank_bg</zorder>
    <zorder>jjc_bg_blue</zorder>
    <zorder>jjc_bg_grey_5</zorder>
@@ -975,6 +991,7 @@
    <zorder>card_button_3</zorder>
    <zorder>card_button_4</zorder>
    <zorder>card_button_5</zorder>
+   <zorder>double_dragon</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

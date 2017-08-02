@@ -15,6 +15,7 @@ AdventureWindow::AdventureWindow(MainWindow* wptr,int acexp,int stg,QWidget *par
     QMainWindow(parent),w(wptr),acExp(acexp),stage(stg),
     ui(new Ui::AdventureWindow)
 {
+    dragonOn=false;
     this->setWindowTitle("Adventure");
 
     thisExp=pow(2,stage-1);
@@ -25,8 +26,12 @@ AdventureWindow::AdventureWindow(MainWindow* wptr,int acexp,int stg,QWidget *par
     ui->setupUi(this);
     ui->myname->setText(w->dataPtr->name);
     ui->exp->setText(QString::number(acExp));
+    ui->see->setStyleSheet("QPushButton{border-image: url(:/image/see);}"
+                                    "QPushButton:pressed{border-image: url(:/image/see_press);}");
     if(w->dataPtr->see==false)
-        ui->see->setEnabled(false);
+        ui->see->setVisible(false);
+    if(w->dataPtr->doubleDragon==false)
+        ui->double_dragon->setVisible(false);
     myHP=5;
     vsHP=5;
     for(int i=0;i<=4;++i) up[i]=0;
@@ -101,6 +106,7 @@ AdventureWindow::AdventureWindow(MainWindow* wptr,int acexp,int stg,QWidget *par
     QObject::connect(ui->discard, SIGNAL(clicked()), this, SLOT(discard()));
     QObject::connect(ui->return_button, SIGNAL(clicked()), this, SLOT(quit()));
     QObject::connect(ui->see, SIGNAL(clicked()), this, SLOT(see()));
+    QObject::connect(ui->double_dragon, SIGNAL(clicked()), this, SLOT(dragon()));
     //QObject::connect(ui->card_button_1, SIGNAL(clicked()), this, SLOT(chooseCard(0)));
     //QObject::connect(ui->card_button_2, SIGNAL(clicked()), this, SLOT(chooseCard(1)));
     //QObject::connect(ui->card_button_3, SIGNAL(clicked()), this, SLOT(chooseCard(2)));
@@ -241,17 +247,34 @@ void AdventureWindow::discard()
     delete effect1;
     delete effect2;
 
-    if(myNum>vsNum) vsHPdecrease();
-    else if(myNum<vsNum)myHPdecrease();
+    if(myNum>vsNum)
+    {
+        vsHPdecrease();
+        if(dragonOn==true&&vsHP>0)vsHPdecrease();
+    }
+    else if(myNum<vsNum)
+    {
+        myHPdecrease();
+        if(dragonOn==true&&myHP>0)myHPdecrease();
+    }
     else
     {
          if(mySuit==vsSuit)
          {
              vsHPdecrease();
              myHPdecrease();
+              if(dragonOn==true&&myHP>0)myHPdecrease();
+               if(dragonOn==true&&vsHP>0)vsHPdecrease();
          }
-        else if(mySuit>vsSuit)vsHPdecrease();
-        else myHPdecrease();
+        else if(mySuit>vsSuit)
+         {
+             vsHPdecrease();
+              if(dragonOn==true&&vsHP>0)vsHPdecrease();
+         }
+        else {
+             myHPdecrease();
+             if(dragonOn==true&&myHP>0)myHPdecrease();
+         }
     }
     if(vsRemain<=0){
         ui->discard->setEnabled(false);
@@ -300,6 +323,19 @@ void AdventureWindow::see()
         leftmatrix.rotate(180);
         vsCard[i]->setIcon(pixmap.transformed(leftmatrix,Qt::SmoothTransformation));
         vsCard[i]->setIconSize(QSize(101,141));
+    }
+}
+
+void AdventureWindow::dragon()
+{
+    if(dragonOn==true)
+    {
+        dragonOn=false;
+        ui->double_dragon->setStyleSheet("QPushButton{border-image: url(:/image/double);}");
+    }
+    else {
+        dragonOn=true;
+        ui->double_dragon->setStyleSheet("QPushButton{border-image: url(:/image/double_dragon_press);}");
     }
 }
 

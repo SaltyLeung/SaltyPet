@@ -89,6 +89,8 @@
         <file alias="pet_old">src/image/pet_old.png</file>
         <file alias="pet_red">src/image/pet_red.png</file>
         <file alias="pet_small">src/image/pet_small.png</file>
+        <file alias="double_dragon_press">src/image/double_dragon_press.png</file>
+        <file alias="see_press">src/image/see_press.png</file>
     </qresource>
     <qresource prefix="/TTF">
         <file alias="FZXS">src/ttf/FZXS24.TTF</file>
